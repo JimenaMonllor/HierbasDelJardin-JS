@@ -16,7 +16,7 @@
     <div class="wrapper">
         <aside>
             <header>
-                <h1 class="logo">Carrito</h1>
+                <h1 class="logo">Hierbas Del Jardin</h1>
             </header>
 
             <nav>
@@ -44,11 +44,11 @@
 
             <div class="contenedor-carrito">
                 <p class="carrito-vacio">Tu carrito está vacío.<i class="bi bi-emoji-frown"></i></p>
-                <div class="carrito-productos">
+                <div class="carrito-productos disabled">
 
                     <div class="carrito-producto">
                         <!-- Primer producto Carrito-->
-                        <img class="producto-imagen"
+                        <img class="carrito-producto-imagen"
                             src="https://http2.mlstatic.com/D_NQ_NP_831841-MLA46860830502_072021-O.webp" alt="MateRosa">
                         <div class="carrito-producto-titulo">
                             <small>Titulo</small>
@@ -71,7 +71,7 @@
 
                     <div class="carrito-producto">
                         <!-- Segundo producto Carrito-->
-                        <img class="producto-imagen"
+                        <img class="carrito-producto-imagen"
                             src="https://http2.mlstatic.com/D_NQ_NP_782388-MLA46860851118_072021-O.webp"
                             alt="MateNegro">
                         <div class="carrito-producto-titulo">
@@ -95,15 +95,17 @@
 
                 </div>
 
-                <div class="carrito-acciones">
+                <div class="carrito-acciones disabled">
                     <!-- Inicio de acciones-carrito -->
 
-                    <div class="carrito-acciones-izquierda"> <!--Acciones-carrito izquierda -->
+                    <div class="carrito-acciones-izquierda">
+                        <!--Acciones-carrito izquierda -->
                         <button class="carrito-acciones-vaciar"> Vaciar Carrito</button>
                     </div>
 
-                    <div class="carrito-acciones-derecha">  <!--Acciones-carrito Derecha -->
-                        <div class="acciones-carrito-total">
+                    <div class="carrito-acciones-derecha">
+                        <!--Acciones-carrito Derecha -->
+                        <div class="carrito-acciones-total">
                             <p>Total:</p>
                             <p id="total">$7.000</p>
                         </div>
@@ -112,11 +114,14 @@
 
                 </div>
 
+                <p class="carrito-comprado disabled">Muchas gracias por tu compra.<i class="bi bi-emoji-smile"></i></p>
+
             </div>
         </main>
+    </div>
 
 
-        <script src="./JS/main.js"></script>
+    <script src="./JS/main.js"></script>
 
 </body>
 
