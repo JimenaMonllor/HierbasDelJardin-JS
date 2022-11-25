@@ -247,10 +247,15 @@ const productos = [
 ];
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
+const botonesCategorias = document.querySelectorAll(".boton-categoria");
+const tituloPrincipal = document.querySelector("#titulo-principal");
 
 
-function cargarProductos() {
-  productos.forEach(producto =>{
+function cargarProductos(productosElegidos) {
+
+  contenedorProductos.innerHTML = "";
+
+  productosElegidos.forEach(producto =>{
 
     const div = document.createElement("div");
     div.classList.add("producto");
@@ -267,4 +272,23 @@ function cargarProductos() {
   })
 }
 
-cargarProductos();
+cargarProductos(productos);
+
+botonesCategorias.forEach(boton => {
+  boton.addEventlistener("click", (e) => {
+
+    botonesCategorias.forEach(boton => boton.ClassList.remove("active"));
+    e.currentTarget.classList.add("active");
+
+    if (e.currentTarget.id != "todos"){
+      const productoscategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
+      tituloPrincipal.innerText = productoCategoria.categoria.nombre;
+
+      const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+      cargarProductos(productosBoton);
+    } else{
+      tituloPrincipal.innerText = "Todos los productos";
+      cargarProductos(productos);
+    }
+  })
+})
