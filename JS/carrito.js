@@ -106,3 +106,16 @@ function comprarCarrito() {
     contenedorCarritoComprado.classList.remove("disabled");
 
 }
+
+let tiempo=3000
+
+setTimeout(()=>{
+    console.log("Gracias por tu compra!")
+    Swal.fire({
+        position: 'top-end',
+        icon:'success',
+        title:'pop up agradecimiento',
+        showConfirmButton: false,
+        timer: 3000
+    })
+},tiempo)
