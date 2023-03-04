@@ -149,7 +149,7 @@ const productos = [
         titulo: "Pimentón Ahumado",
         imagen: "./img/condimentos/01.jpg",
         categoria: {
-            nombre: "Pantalones",
+            nombre: "Condimentos",
             id: "condimentos"
         },
         precio: 1000
